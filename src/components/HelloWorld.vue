@@ -1,28 +1,28 @@
 <template>
   <section>
-    <input placeholder="num1" type="number">
-    <select > 
+    <input placeholder="num1" type="number" v-model.number="num1">
+    <select v-model="operand" > 
       <option value="+"> + </option>
       <option value="-"> - </option>
       <option value="*"> * </option>
       <option value="/"> / </option>
-  </select>
-  <input placeholder="num2" type="number">
-  <h2>{{result()}}</h2>
+    </select>
+    <input placeholder="num2" type="number" v-model.number="num2">
+    <h2>{{result()}}</h2>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
+  //name: 'HelloWorld',
+  //props: {
+    //msg: String
+  //},
   data() {
     return {
       num1: 0,
       num2: 0,
-      operand:""
+      operand:" "
     };
   }, 
   methods: {
