@@ -8,7 +8,7 @@
       <option value="/"> / </option>
   </select>
   <input placeholder="num2" type="number">
-  <h2> {{result}} </h2>
+  <h2> {{ result() }}</h2>
   </section>
 </template>
 
@@ -25,20 +25,20 @@ export default {
       operand:""
     };
   }, 
-  computed: {
-  result() {
-    switch(this.operand) {
-      case "+":
-        return this.num1 + this.num2
-      case "-":
-        return this.num1 - this.num2
-      case "*":
-        return this.num1 * this.num2
-      case "/":
-        return this.num1 / this.num2
+  methods: {
+    result(){
+      switch(this.operand) {
+        case "+":
+          return this.num1 + this.num2
+        case "-":
+          return this.num1 - this.num2
+        case "*":
+          return this.num1 * this.num2
+        case "/":
+          return this.num1 / this.num2
+      }
     }
   }
-}
 }
 </script>
 
