@@ -2,19 +2,19 @@
     <body style="text-align:center">
         <form @submit.prevent="calculate" class="main">
             <div>
-            <label>loan amount</label>
+            <label>Loan Amount</label>
             <input v-model.number="loanAmount " alignment="center" v-text="center" text-align="center"/>
             </div>
             <div>
-            <label>interest rate</label>
+            <label>Interest Rate</label>
             <input v-model.number="interestRate " alignment="center" v-text="center" text-align="center"/>
             </div>
             <div>
-            <label>number of months to pay off loan</label>
+            <label>Number of months to pay off loan</label>
             <input v-model.number="numMonths " alignment="center" v-text="center" text-align="center"/>
             </div>
             <button @click="Calculate">Calculate monthly payment</button>
-            <button type="reset" value="reset">ClearAll</button>
+            <button @click="ClearAll" type="reset" value="reset">ClearAll</button>
             </form>  
             <p>monthlypayment:{{monthlyPayment.toFixed(2)}}</p>
     </body>
@@ -66,5 +66,5 @@ export default {
 .main{table-layout:fixed;width:94%;border:0;border-collapse:collapse;margin:0 auto}
 .main td{padding:0 8px;vertical-align:middle;border:0}
 .main input{width:30%;border:1px solid #ccc;margin:2px 0;padding:0 2%;height:22px;text-align:right}.ac{text-align:center}.b{font-weight:bold}
-.main select{width:30%;border:1px solid #ccc;margin:2px 0;background:#fff;height:22px}.w50{width:30%}.main button{width:30%;font-weight:bold;margin:3px 0}
+.main select{width:30%;border:1px solid #ccc;margin:2px 0;background:#fff;height:22px}.w50{width:30%}.main button{width:20%;font-weight:bold;margin:3px 0,}
 </style>
