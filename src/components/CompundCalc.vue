@@ -1,15 +1,15 @@
 <template>
-  <section>
-    <input placeholder="num1" type="number" v-model.number="num1">
-    <select v-model="operand" > 
-      <option value="+"> + </option>
-      <option value="-"> - </option>
-      <option value="*"> * </option>
-      <option value="/"> / </option>
-    </select>
-    <input placeholder="num2" type="number" v-model.number="num2">
-    <h2>{{result()}}</h2>
-  </section>
+    <body>
+        <title>"Compound Interest Calculator"</title>
+    <section>
+        <input placeholder="Principal (P) (INR) " type="number" v-model.number="num1">
+        <input placeholder="Interest Rate (R) (%)" type="number" v-model.number="num2">
+        <input placeholder="Compound Period (n) (Month)" type="number" v-model.number="num2">
+    </section>
+    <textarea>{{monthlyPayment}}</textarea>
+    <button @click="Calculate">"Calculate Compound Interest"</button> 
+    <button @click="Clear">"Clear"</button> 
+    </body>
 </template>
 
 <script>
@@ -20,26 +20,39 @@ export default {
   //},
   data() {
     return {
-      num1: 0,
-      num2: 0,
-      operand:" "
+      P: 0,
+      R: 0,
+      n: 0,
+      monthlyPayment: 0,
     };
   }, 
+  computed: {
+    formValid() {
+      const { P, R, n } = this;
+      return (
+        +P >= 0 &&
+        0 <= +R &&
+        +R <= 100 &&
+        +n > 0
+      );
+    },
+  },  
   methods: {
-    result(){
-      switch(this.operand) {
-        case "+":
-          return this.num1 + this.num2
-        case "-":
-          return this.num1 - this.num2
-        case "*":
-          return this.num1 * this.num2
-        case "/":
-          return this.num1 / this.num2
-      }
-    }
-  }
-}
+    Calculate(){
+        if (!this.formValid) {
+            return;
+        }
+        const { P, R, n } = this;
+      this.monthlyPayment = (P * (1 + R / 100)) / n;    
+    },
+
+    Clear(){
+        this.p=0
+        this.R=0
+        this.n=0
+    },  
+  },
+};
 </script>
 
 
