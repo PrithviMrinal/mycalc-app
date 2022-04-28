@@ -3,18 +3,18 @@
         <form @submit.prevent="calculate" class="main">
             <div>
             <label>loan amount</label>
-            <input v-model.number="loanAmount" alignment="center" v-text="center" text-align="center"/>
+            <input v-model.number="loanAmount " alignment="center" v-text="center" text-align="center"/>
             </div>
             <div>
             <label>interest rate</label>
-            <input v-model.number="interestRate" alignment="center" v-text="center" text-align="center"/>
+            <input v-model.number="interestRate " alignment="center" v-text="center" text-align="center"/>
             </div>
             <div>
             <label>number of months to pay off loan</label>
-            <input v-model.number="numMonths" alignment="center" v-text="center" text-align="center"/>
+            <input v-model.number="numMonths " alignment="center" v-text="center" text-align="center"/>
             </div>
-            <button type="submit">Calculate monthly payment</button>
-            <button type="submit">ClearAll</button>
+            <button @click="Calculate">Calculate monthly payment</button>
+            <button type="reset" value="reset">ClearAll</button>
             </form>  
             <p>monthlypayment:{{monthlyPayment.toFixed(2)}}</p>
     </body>
