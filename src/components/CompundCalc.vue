@@ -6,7 +6,7 @@
         <input placeholder="Interest Rate (R) (%)" type="number" v-model.number="num2">
         <input placeholder="Compound Period (n) (Month)" type="number" v-model.number="num2">
     </section>
-    <textarea>{{monthlyPayment}}</textarea>
+    <h2>{{monthlyPayment}}</h2>
     <button @click="Calculate">"Calculate Compound Interest"</button> 
     <button @click="Clear">"Clear"</button> 
     </body>
