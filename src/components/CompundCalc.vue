@@ -43,11 +43,11 @@ export default {
             return;
         }
         const { P, R, n } = this;
-      this.monthlyPayment = (P * (1 + R / 100)) / n;    
+        this.monthlyPayment = (P * (1 + R / 100)) / n;    
     },
 
     Clear(){
-        this.p=0
+        this.P=0
         this.R=0
         this.n=0
     },  
