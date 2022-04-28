@@ -1,14 +1,16 @@
 <template>
-  <HelloWorld></HelloWorld>
+  <CompoundCalcBB></CompoundCalcBB>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+//import HelloWorld from './components/HelloWorld'
+//import CompundCalc from './components/CompundCalc'
+import CompoundCalcBB from './components/CompoundCalcBB'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CompoundCalcBB
   }
 }
 </script>
