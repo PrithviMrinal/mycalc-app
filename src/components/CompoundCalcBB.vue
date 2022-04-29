@@ -2,15 +2,15 @@
     <body style="text-align:center">
         <form @submit.prevent="calculate" class="main">
             <div>
-            <label>Loan Amount</label>
+            <label>Loan Amount </label>
             <input v-model.number="loanAmount " alignment="center" v-text="center" text-align="center"/>
             </div>
             <div>
-            <label>Interest Rate</label>
+            <label>Interest Rate </label>
             <input v-model.number="interestRate " alignment="center" v-text="center" text-align="center"/>
             </div>
             <div>
-            <label>Number of months to pay off loan</label>
+            <label>Number of months to pay off loan </label>
             <input v-model.number="numMonths " alignment="center" v-text="center" text-align="center"/>
             </div>
             <button @click="Calculate">Calculate monthly payment</button>
