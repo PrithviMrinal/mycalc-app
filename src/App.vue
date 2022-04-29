@@ -1,17 +1,17 @@
 <template>
-  <TicktacToe></TicktacToe>
+  <CompoundCalcBB></CompoundCalcBB>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld'
-//import CompundCalc from './components/CompundCalc'
-//import CompoundCalcBB from './components/CompoundCalcBB'
-import TicktacToe from './components/TicktacToe'
+// import CompundCalc from './components/CompundCalc'
+import CompoundCalcBB from './components/CompoundCalcBB'
+// import TicktacToe from './components/TicktacToe'
 
 export default {
   name: 'App',
   components: {
-    TicktacToe
+    CompoundCalcBB
   }
 }
 </script>
